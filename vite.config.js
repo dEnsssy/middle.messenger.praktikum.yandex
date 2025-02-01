@@ -82,6 +82,8 @@ export default defineConfig({
                 reg: "reg.html",
                 chats: "chats.html",
                 profile: "profile.html",
+                e400: "e400.html",
+                e500: "e500.html",
             },
         },
     },
