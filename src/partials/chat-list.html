@@ -1,0 +1,12 @@
+<div class="chat-list">
+    {{#each chats}}
+    <div class="chat-item">
+        <div class="chat-item__img"></div>
+        <div class="chat-item__wrapper">
+            <div class="chat-item__name">{{this.name}}</div>
+            <div class="chat-item__last-message">{{this.lastMessage}}</div>
+        </div>
+        <div class="chat-item__time">{{this.time}}</div>
+    </div>
+    {{/each}}
+</div>

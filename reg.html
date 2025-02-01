@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/styles/style.scss" />
+        <title>{{ title }}</title>
+    </head>
+    <body class="reg">
+        <section class="reg__wrapper container-l">
+            <h1 class="reg__title">Регистрация</h1>
+            <form action="#" class="reg__form">
+                {{> input type="email" name="email" id="email"
+                placeholder="Почта" label="Почта" class="reg" }} {{> input
+                type="text" name="login" id="login" placeholder="Логин"
+                label="Логин" class="reg" }} {{> input type="text"
+                name="first_name" id="first_name" placeholder="Имя" label="Имя"
+                class="reg" }} {{> input type="text" name="second_name"
+                id="second_name" placeholder="Фамилия" label="Фамилия"
+                class="reg" }} {{> input type="tel" name="phone" id="phone"
+                placeholder="Телефон" label="Телефон" class="reg" }} {{> input
+                type="password" name="password" id="password"
+                placeholder="Пароль" label="Пароль" class="reg" }}{{> input
+                type="password" name="password" id="password1"
+                placeholder="Пароль(ещё раз)" label="Пароль(ещё раз)"
+                class="reg" }}
+
+                <button class="reg__form-btn--submit">
+                    Зарегистрироваться
+                </button>
+                <a class="reg__link" href="./index.html">Войти</a>
+            </form>
+        </section>
+    </body>
+</html>
