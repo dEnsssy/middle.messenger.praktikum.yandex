@@ -75,9 +75,10 @@ const pageContexts = {
 };
 
 export default defineConfig({
+    base: "./",
     root: "src",
     build: {
-        outDir: "dist", // Папка для собранного проекта
+        outDir: "../dist", // Папка для собранного проекта
         emptyOutDir: true, // Очистка папки перед новой сборкой
         assetsDir: "assets", // Подпапка для статических файлов
         rollupOptions: {
@@ -107,6 +108,9 @@ export default defineConfig({
     server: {
         port: 3000, // Порт для dev-сервера
         open: true, // Автоматически открывать проект в браузере
+    },
+    preview: {
+        port: 3000,
     },
     resolve: {
         alias: {
