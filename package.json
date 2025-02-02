@@ -8,7 +8,7 @@
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "start": "vite"
+        "start": "npm run build && vite"
     },
     "dependencies": {
         "handlebars": "^4.7.8"
