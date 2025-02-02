@@ -1,12 +1,12 @@
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/styles/style.scss" />
+        <link rel="stylesheet" href="../styles/style.scss" />
         <title>{{title}}</title>
     </head>
     <body class="auth">
-        <section class="auth__wrapper container-l">
+        <main class="auth__wrapper container-l">
             <h1 class="auth__title">Вход</h1>
             <form class="auth__form">
                 {{> input type="text" name="login" id="login"
@@ -15,8 +15,9 @@
                 placeholder="Пароль" label="Пароль" class="auth" }}
 
                 <button class="auth__form-btn--submit">Вход</button>
-                <a class="auth__link" href="./reg.html">Нет аккаунта?</a>
+
+                <a href="./reg.html" class="auth__link">Нет аккаунта?</a>
             </form>
-        </section>
+        </main>
     </body>
 </html>

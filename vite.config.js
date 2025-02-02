@@ -3,6 +3,9 @@ import handlebars from "vite-plugin-handlebars";
 
 const pageContexts = {
     index: {
+        title: "Список страниц",
+    },
+    auth: {
         title: "Авторизация",
     },
     reg: { title: "Регистрация" },
@@ -72,25 +75,29 @@ const pageContexts = {
 };
 
 export default defineConfig({
+    root: "src",
     build: {
         outDir: "dist", // Папка для собранного проекта
         emptyOutDir: true, // Очистка папки перед новой сборкой
         assetsDir: "assets", // Подпапка для статических файлов
         rollupOptions: {
             input: {
-                index: "index.html",
-                reg: "reg.html",
-                chats: "chats.html",
-                profile: "profile.html",
-                e404: "e404.html",
-                e500: "e500.html",
+                indeex: "src/index.html",
+                auth: "src/pages/auth.html",
+                reg: "src/pages/reg.html",
+                chats: "src/pages/chats.html",
+                profile: "src/pages/profile.html",
+                e404: "src/pages/e404.html",
+                e500: "src/pages/e500.html",
+            },
+            output: {
+                dir: "dist", // Папка для вывода собранных файлов
             },
         },
     },
     plugins: [
         handlebars({
             partialDirectory: "src/partials", // Путь к частичным шаблонам
-            // Функци для динамического выбора контекста, не знаю как иначе динамически выбирать контекст
             context(pagePath) {
                 const pageName = pagePath.split("/").pop().split(".")[0]; // Получаем имя страницы
                 return pageContexts[pageName] || {}; // Возвращаем соответствующий контекст

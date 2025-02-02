@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="../styles/style.scss" />
+        <script src="../main.js" type="module" defer></script>
+    </head>
+    <body>
+        <main class="profile">
+            <div class="profile__left">
+                <a href="./chats.html">
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="14"
+                            cy="14"
+                            r="14"
+                            transform="rotate(-180 14 14)"
+                            fill="#3369F3"
+                        />
+                        <rect
+                            x="20"
+                            y="14.8"
+                            width="11"
+                            height="1.6"
+                            transform="rotate(-180 20 14.8)"
+                            fill="white"
+                        />
+                        <path
+                            d="M13 19L9 14L13 9"
+                            stroke="white"
+                            stroke-width="1.6"
+                        /></svg
+                ></a>
+            </div>
+            <div class="profile__right">
+                <div class="profile__right--wrapper">
+                    <div class="profile__right--top">
+                        <div class="profile__right--img">
+                            <img
+                                src="../imgs/profile.png"
+                                alt="Картинка профиля"
+                                id="profileImg"
+                            />
+                        </div>
+                        <div class="profile__right--name">Иван</div>
+                    </div>
+                    <form class="profile__form" id="profileForm">
+                        <ul class="profile__right--center js-data">
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Почта
+                                </h3>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Почта"
+                                    class="profile__right--center-item--value"
+                                    value="pochta@yandex.ru"
+                                    readonly
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Логин
+                                </h3>
+                                <input
+                                    type="text"
+                                    name="login"
+                                    id="login"
+                                    placeholder="Логин"
+                                    class="profile__right--center-item--value"
+                                    value="ivanivanov"
+                                    readonly
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Имя
+                                </h3>
+                                <input
+                                    type="text"
+                                    name="first_name"
+                                    id="first_name"
+                                    placeholder="Имя"
+                                    class="profile__right--center-item--value"
+                                    value="Иван"
+                                    readonly
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Фамилия
+                                </h3>
+                                <input
+                                    type="text"
+                                    name="second_name"
+                                    id="second_name"
+                                    placeholder="Фамилия"
+                                    class="profile__right--center-item--value"
+                                    value="Иванов"
+                                    readonly
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Имя в чате
+                                </h3>
+                                <input
+                                    type="text"
+                                    name="display_name"
+                                    id="display_name"
+                                    placeholder="Имя в чате"
+                                    class="profile__right--center-item--value"
+                                    value="Иван"
+                                    readonly
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Телефон
+                                </h3>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Телефон"
+                                    class="profile__right--center-item--value"
+                                    value="+7 (909) 967 30 30"
+                                    readonly
+                                />
+                            </li>
+                        </ul>
+                        <ul class="profile__right--center js-passwords">
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Старый пароль
+                                </h3>
+                                <input
+                                    type="password"
+                                    name="oldPassword"
+                                    id="oldPassword"
+                                    placeholder="Старый пароль"
+                                    class="profile__right--center-item--value"
+                                    value="********"
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Новый пароль
+                                </h3>
+                                <input
+                                    type="password"
+                                    name="newPassword"
+                                    id="newPassword"
+                                    placeholder="Новый пароль"
+                                    class="profile__right--center-item--value"
+                                    value="********"
+                                />
+                            </li>
+                            <li class="profile__right--center-item">
+                                <h3 class="profile__right--center-item--name">
+                                    Повторите новый пароль
+                                </h3>
+                                <input
+                                    type="password"
+                                    name="newPassword_confirm"
+                                    id="newPassword_confirm"
+                                    placeholder="Повторите новый пароль"
+                                    class="profile__right--center-item--value"
+                                    value="********"
+                                />
+                            </li>
+                        </ul>
+                        <button class="profile__form-btn--save js-save-data">
+                            Сохранить
+                        </button>
+                        <button class="profile__form-btn--save js-save-pas">
+                            Сохранить
+                        </button>
+                        <div class="profile__right--bottom">
+                            <button
+                                class="profile__right--bottom-btn js-change-data"
+                            >
+                                Изменить данные</button
+                            ><button
+                                class="profile__right--bottom-btn js-change-pas"
+                            >
+                                Изменить пароль</button
+                            ><a
+                                href="./auth.html"
+                                class="profile__right--bottom-btn js-exit"
+                            >
+                                Выйти
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="profile__modal">
+                <div class="profile__modal-wrapper">
+                    <h3 class="profile__modal-title">Загрузите файл</h3>
+                    <label class="profile__modal-label"
+                        >Выбрать файл на компьютере
+                        <input
+                            type="file"
+                            accept="image/*"
+                            name="avatar"
+                            class="profile__modal-input"
+                    /></label>
+                    <p class="profile__modal-img--name"></p>
+                    <button class="profile__modal-btn">Поменять</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
