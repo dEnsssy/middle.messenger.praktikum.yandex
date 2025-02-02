@@ -83,7 +83,7 @@ export default defineConfig({
         assetsDir: "assets", // Подпапка для статических файлов
         rollupOptions: {
             input: {
-                indeex: "src/index.html",
+                index: "src/index.html",
                 auth: "src/pages/auth.html",
                 reg: "src/pages/reg.html",
                 chats: "src/pages/chats.html",
