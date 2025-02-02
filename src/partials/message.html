@@ -1,0 +1,14 @@
+<div class="message {{#if isMe}}message--mine{{/if}}">
+    <div class="message__content">
+        {{#if text}}
+        <p class="message__text">{{text}}</p>
+        {{/if}} {{#if image}}
+        <img
+            src="../imgs/img.png"
+            alt="Изображение в чате"
+            class="message__image"
+        />
+        {{/if}}
+        <span class="message__time">{{time}}</span>
+    </div>
+</div>

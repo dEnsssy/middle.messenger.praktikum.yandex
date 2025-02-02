@@ -1,0 +1,23 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/style.scss" />
+        <title>{{title}}</title>
+    </head>
+    <body class="auth">
+        <main class="auth__wrapper container-l">
+            <h1 class="auth__title">Вход</h1>
+            <form class="auth__form">
+                {{> input type="text" name="login" id="login"
+                placeholder="Логин" label="Логин" class="auth" }} {{> input
+                type="password" name="password" id="password"
+                placeholder="Пароль" label="Пароль" class="auth" }}
+
+                <button class="auth__form-btn--submit">Вход</button>
+
+                <a href="./reg.html" class="auth__link">Нет аккаунта?</a>
+            </form>
+        </main>
+    </body>
+</html>
